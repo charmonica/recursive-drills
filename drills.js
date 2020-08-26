@@ -12,3 +12,17 @@ function countingSheep(num) {
 
 countingSheep(7);
 
+//Power Calculator
+
+function powerCalculator(base, exp) {
+  if (base <= 0) {
+    console.log('Num must be greater than 0');
+  } else if (exp === 0) {
+    return 1;
+  } else {
+    return base * powerCalculator(base, exp - 1);
+  }
+}
+
+console.log(powerCalculator(10, -2));
+
