@@ -10,8 +10,6 @@ function countingSheep(num) {
   }
 }
 
-countingSheep(7);
-
 //Power Calculator
 
 function powerCalculator(base, exp) {
@@ -24,5 +22,33 @@ function powerCalculator(base, exp) {
   }
 }
 
-console.log(powerCalculator(10, -2));
+//Reverse String
 
+function reverseString(string) {
+  if (string.length === 1) {
+    return string[0];
+  } else {
+    return (string.charAt(string.length - 1) + reverseString(string.slice(0, -1)));
+  }
+}
+
+//nth Triangular Number
+
+function triangularNumber(number) {
+  if (number === 1) {
+    return number;
+  } else {
+    return number + triangularNumber(number -1);
+  }
+}
+
+//String Splitter
+
+function stringSplitter(string, divider) {
+  if (string.length <= 1) {
+    string [0] === divider ? string [0] : ',';
+  } else {
+    const splitString = stringSplitter((string.substring(1, string.length -1)), divider);
+    return splitString;
+  }
+}
